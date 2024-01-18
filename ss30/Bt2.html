@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bt2</title>
+</head>
+<body>
+    <script>
+        let n=+prompt("Nhap so nguyen duong bat ky");
+        let sum=0;
+        for (let i = 1; i < n; i++) {
+            if (i%2==1) {
+                sum+=i;
+            }
+            if (i===(n-1)&&sum%2==0) {
+                sum=sum-i+1;
+            }
+        }
+        console.log("ket qua can tim la",sum);
+    </script>
+</body>
+</html>

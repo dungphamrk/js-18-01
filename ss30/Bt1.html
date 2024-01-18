@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bt1</title>
+    </head>
+    <body>
+        <script>
+        function doiXung(arr) {
+            let n= Math.floor(arr.length/2);
+            let j=arr.length-n;
+            return arr.slice(0,n).join("")===arr.slice(j,arr.length).reverse().join("");
+            
+        }
+        let arr1=[1,2,3,4,3,2,1];
+        let arr2=[2,3,6,8,4,2,3];
+        console.log(doiXung(arr1));
+        console.log(doiXung(arr2));
+        
+    </script>
+    </body>
+</html>

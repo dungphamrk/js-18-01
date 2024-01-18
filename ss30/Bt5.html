@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bt5</title>
+    </head>
+    <body>
+        <script>
+        let s=prompt("Nhap chuoi bat ky");
+        function tranform(s) {
+            s=s.split(" ");
+            for (let i = 0; i < s.length; i++) {
+            let n=s[i].length;
+            s[i]=s[i].slice(0,n-1)+s[i][n-1].toUpperCase(); 
+            }
+        s=s.join(" ") 
+        return s;   
+        }
+        console.log(tranform(s));
+    </script>
+    </body>
+</html>

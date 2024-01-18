@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bt7</title>
+    </head>
+    <body>
+        <script>
+        function find(arr, targetSum) {
+    let currentSum = 0;
+    let start = 0;
+    let result = [];
+    let resultSum = Infinity;
+
+    for (let end = 0; end < arr.length; end++) {
+        currentSum += arr[end];
+
+        while (currentSum > targetSum) {
+            const sum = currentSum - arr[start];
+
+            if (sum > targetSum && sum < resultSum) {
+                resultSum = sum;
+                result = arr.slice(start + 1, end + 1);
+            }
+
+            currentSum -= arr[start];
+            start++;
+        }
+    }
+
+    return result;
+}
+
+
+let arr = [1, 4, 2, 10,8,5, 2, 3, 1];
+let sum=+prompt("Nhap so bat ky")
+let result = find(arr, sum);
+console.log(result);
+
+    </script>
+    </body>
+</html>
